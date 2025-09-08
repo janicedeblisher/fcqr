@@ -1,0 +1,81 @@
+@charset "UTF-8"; @import url("./fonts/NotoSansKR.css");/* Reset */
+* { box-sizing: border-box; letter-spacing: -0.5px; -webkit-tap-highlight-color: transparent; } 
+html { font-size: 10px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; } 
+body,h1,h2,h3,h4,h5,h6,div,p,address,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,hr { margin: 0; padding: 0; } 
+ul,ol { list-style: none; } 
+table { margin: 0; padding: 0; border-spacing: 0; border: 0; } 
+img,fieldset { border: 0; vertical-align: top; } 
+address,em { font-style: normal; font-weight: 400; } 
+input,select,button,textarea { line-height: normal; font-family: "Noto Sans KR", sans-serif; vertical-align: middle; } 
+body { background: #fff; line-height: normal; font-weight: 400; font-family: "Noto Sans KR", sans-serif; text-align: left; margin: 0 auto; } 
+hr { display: none; } 
+a { text-decoration: none; } 
+label,input[type="button"],input[type="submit"],input[type="image"],button { padding: 0; border: none; cursor: pointer; } 
+input[type="text"],input[type="tel"],input[type="number"],input[type="password"],input[type="button"],input[type="submit"],input[type="image"],textarea { border-radius: 0; appearance: none; -webkit-appearance: none; line-height: normal; } 
+input[type="radio"],input[type="checkbox"] { appearance: none; -webkit-appearance: none; -moz-appearance: none; background: none; margin: 0; padding: 0; outline: none; cursor: pointer; margin-top: -3px; } 
+textarea { overflow-y: auto; } 
+fieldset { display: block; } 
+button { -webkit-appearance: none; appearance: none; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; background: transparent; border: none; padding: 0; margin: 0; text-align: center; text-decoration: none; line-height: 1; } 
+select { text-indent: 0; -moz-appearance: none; -webkit-appearance: none; -ms-appearance: none; appearance: none; cursor: pointer; } 
+select::-ms-expand { display: none; } 
+legend,caption,article,aside,dialog,footer,header,section,nav,figure,menu { display: block; } 
+::-webkit-input-placeholder { font-size: 16px; color: #bbb; } 
+:-ms-input-placeholder { font-size: 16px; color: #bbb; } 
+::placeholder { font-size: 16px; color: #bbb; } 
+input[type="password"]::-ms-reveal { display: none; } 
+input[type="search"]::-webkit-search-cancel-button { display: none; } 
+input[type="search"] { -webkit-appearance: none !important; appearance: none !important; outline: none !important; border: none; background: none !important; } 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{ -webkit-appearance: none; margin: 0; }
+
+
+body { -webkit-touch-callout: none; user-select: none; -moz-user-select: none; -ms-user-select: none; -webkit-user-select: none; } 
+img { pointer-events: none; user-drag: none; -webkit-user-drag: none; } 
+body { max-width: 480px; min-width: 320px; } 
+.blind { overflow: hidden; position: absolute; clip: rect(0 0 0 0); width: 1px; height: 1px; margin: -1px; } 
+.hidden { display: none; } 
+.wrap { max-width: 480px; min-width: 320px; width: 100%; margin: 0 auto; overflow: hidden; } 
+.bold { font-weight: 700; } 
+
+/* 통합QR 결제창 */
+.wrap { color: #222; } 
+.header { display: flex; justify-content: space-between; align-items: center; padding: 24px 16px; } 
+.logo { height: 16px; } 
+.language-selector { position: relative; } 
+#langBtn { font-size: 13px; color: #777; display: flex; justify-content: space-between; align-items: center; width: 90px; height: 30px; padding: 6px; border: 1px solid #E1E1E1; border-radius: 6px; } 
+.lang-wrap { display: flex; align-items: center; gap: 2px; } 
+.lang-list { position: absolute; top: 100%; right: 0; min-width: 90px; border-radius: 4px; border: 1px solid #F8F8F8; background: #FFF; box-shadow: 0 4px 12px 0 rgba(51, 51, 51, 0.25); color: #666; padding: 5px 0; margin: 0; z-index: 10; } 
+.lang-list li { padding: 8px 12px; font-size: 13px; } 
+.content { padding: 0 16px 30px; } 
+.amount-box { background: #f7f7f7; border-radius: 12px; padding: 24px; margin-bottom: 30px; } 
+.amount-row { display: flex; justify-content: space-between; align-items: center; } 
+.amount-row .label { font-size: 14px; color: #666; } 
+.amount-row .value { font-size: 16px; } 
+.amount-row.total { margin-top: 12px; } 
+.amount-row.total .label { font-size: 14px; color: #666; } 
+.amount-row.total .label .vat { display: block; font-size: 12px; color: #999; font-weight: 400; } 
+.amount-row.total .value { font-size: 22px; font-weight: 700; } 
+.pay-options p { font-size: 16px; font-weight: 500; color: #666; margin-bottom: 10px; } 
+.pay-list { display: flex; gap: 8px; } 
+.pay-option { display: flex; flex-direction: column; justify-content: center; flex: 1; gap: 12px; border: 1px solid #ddd; border-radius: 10px; text-align: center; padding: 20px 10px 18px; } 
+.pay-option.active { outline: 2px solid #E1012B; outline-offset: -1px; } 
+.pay-option img { height: 16px; } 
+.pay-option span { display: block; font-size: 14px; } 
+.banner a { display: block; width: 100%; margin-top: 40px; } 
+.banner img { width: 100%; height: 100%; border-radius: 10px; } 
+.cta-fixed { position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); width: 100%; max-width: 480px; background: #fff; padding: 16px; text-align: center; } 
+.cta-fixed::before { content: ""; position: absolute; top: -19px; left: 0; width: 100%; height: 20px; background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0)); } 
+.cta-fixed p { font-size: 13px; color: #666; margin-bottom: 12px; } 
+.cta-fixed .red { color: #E1012B; font-weight: 500; } 
+.pay-btn, .next-btn { background: #E1012B; color: #fff; border: none; padding: 16px; width: 100%; height: 54px; font-size: 17px; font-weight: 500; border-radius: 12px; } 
+
+.title-box { margin: 50px 0 30px; } 
+.shop { font-size: 15px; color: #666; text-align: center; } 
+.page-title { font-size: 24px; font-weight: 600; text-align: center; margin-top: 8px; } 
+.amount-field { display: flex; align-items: center; justify-content: space-between; gap: 8px; height: 66px; border-radius: 12px; padding: 0 20px; background-color: #F8F8F8; } 
+.amount-field.focus { border: 2px solid #E1012B; } 
+.amount-field input{ width: 100%; height: 100%; border: 0; outline: none; background: transparent; -webkit-appearance: none; appearance: none; border-radius: 0; font-size: 22px; font-weight: 600; padding-bottom: 4px; }
+.amount-field:focus-within { border: 2px solid #E1012B; } 
+.amount-field input::placeholder { color: #bbb; font-size: 22px; font-weight: 400; } 
+.unit { font-size: 22px; color: #222; padding-bottom: 4px; } 
+.next-btn:disabled { opacity: .35; } 

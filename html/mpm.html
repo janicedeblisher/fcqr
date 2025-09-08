@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>통합QR 결제창</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="header">
+        <img src="../images/logo_kicc.svg" alt="KICC 로고" class="logo">
+        <div class="language-selector">
+          <button id="langBtn">
+            <div class="lang-wrap">
+              <img src="../images/icon_globe.svg" alt="언어 선택">
+              <span id="selectedLang">한국어</span>
+            </div>
+            <img src="../images/icon_arrow.svg" alt="화살표 아이콘">
+          </button>
+          <ul id="langList" class="lang-list hidden">
+            <li data-lang="한국어">한국어</li>
+            <li data-lang="English">English</li>
+            <li data-lang="中文">中文</li>
+            <li data-lang="日本語">日本語</li>
+          </ul>
+        </div>
+      </header>
+      <main class="content">
+        <form action="#" id="paymentForm" novalidate>
+          <section class="title-box">
+            <p class="shop">한국정보통신(주) 한국면세점</p>
+            <p class="page-title">얼마를 결제할까요?</p>
+          </section>
+          <section class="amount-input-wrap">
+            <label for="amount" class="blind">결제금액 입력</label>
+            <div class="amount-field" id="amountField">
+              <input id="amount" type="text" inputmode="numeric" placeholder="결제금액 입력" required />
+              <input id="amountRaw" type="hidden" name="amount" />
+              <span class="unit">원</span>
+            </div>
+          </section>
+        </form>
+      </main>
+      <div class="cta-fixed">
+        <button type="submit" class="next-btn" form="paymentForm">다음</button>
+      </div>
+    </div>
+    <script src="../js/common.js"></script>
+  </body>
+</html>

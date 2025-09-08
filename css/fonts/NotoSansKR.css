@@ -1,0 +1,24 @@
+/* 한국어 */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400; 
+  src: url('/fonts/kr/NotoSansKR-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500; 
+  src: url('/fonts/kr/NotoSansKR-Medium.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/kr/NotoSansKR-Bold.woff2') format('woff2');
+  font-display: swap;
+}
