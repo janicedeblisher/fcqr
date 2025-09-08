@@ -84,4 +84,4 @@ body { max-width: 480px; min-width: 320px; }
 /* 결제상태 */
 .payment-status{ display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: calc(100vh - 140px); text-align: center; }
 .status-icon{ width: 120px; height: 120px; margin: 0 auto 5px; }
-.status-text{ font-size: 22px; font-weight: 700; color: #444; }
+.status-text{ font-size: 22px; font-weight: 500; color: #444; }
