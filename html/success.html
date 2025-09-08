@@ -28,68 +28,20 @@
         </div>
       </header>
       <main class="content">
-        <section class="amount-box">
-          <div class="amount-row">
-            <div class="label">판매처</div>
-            <div class="value">한국면세점</div>
-          </div>
-          <div class="amount-row total">
-            <div class="label">총 결제금액<br><span class="vat">(VAT 포함)</span></div>
-            <div class="value">500,000원</div>
-          </div>
-        </section>
-        <section class="pay-options">
-          <p>결제수단</p>
-          <div class="pay-list">
-            <div class="pay-option" data-method="alipay">
-              <img src="../images/logo_alipay.svg" alt="Alipay">
-              <span>알리페이+</span>
-            </div>
-            <div class="pay-option" data-method="wechat">
-              <img src="../images/logo_wechatpay.svg" alt="WeChat">
-              <span>위챗페이</span>
-            </div>
-            <div class="pay-option" data-method="linepay">
-              <img src="../images/logo_linepay.svg" alt="LINE Pay">
-              <span>라인페이</span>
-            </div>
-          </div>
-        </section>
-        <section class="banner">
-            <a href="https://www.이지큐알오더.com/" target="_blank">
-              <img src="../images/banner_sample.png" alt="광고 배너">
-            </a>
+          <section class="payment-status" aria-live="polite">
+            <div id="statusIcon"></div>
+            <p class="status-text">결제 완료</p>
         </section>
       </main>
-      <div class="cta-fixed">
-        <p>결제정보를 확인하였으며, <span class="red">결제 진행</span>에 <span class="red">동의</span>합니다.</p>
-        <button class="pay-btn"><span class="bold">500,000</span>원 결제하기</button>
-      </div>
     </div>
+    <script src="../js/lottie.min.js"></script>
     <script>
-      // 언어 선택
-      const langBtn = document.getElementById('langBtn');
-      const langList = document.getElementById('langList');
-      const selectedLang = document.getElementById('selectedLang');
-
-      langBtn.addEventListener('click', () => {
-        langList.classList.toggle('hidden');
-      });
-
-      langList.querySelectorAll('li').forEach(item => {
-        item.addEventListener('click', () => {
-          selectedLang.textContent = item.dataset.lang;
-          langList.classList.add('hidden');
-        });
-      });
-
-      // 결제수단 선택
-      const payOptions = document.querySelectorAll('.pay-option');
-      payOptions.forEach(option => {
-        option.addEventListener('click', () => {
-          payOptions.forEach(el => el.classList.remove('active'));
-          option.classList.add('active');
-        });
+      lottie.loadAnimation({
+        container: document.getElementById('statusIcon'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: '../images/ico_success.json'
       });
     </script>
   </body>
